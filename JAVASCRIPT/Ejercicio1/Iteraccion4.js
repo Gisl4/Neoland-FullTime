@@ -34,8 +34,23 @@ const rickAndMortyCharacters1 = [
   "Summer",
   "Lapiz Lopez",
 ];
-delete rickAndMortyCharacters1[5];
-console.log(rickAndMortyCharacters1[5]);
+
+rickAndMortyCharacters1.pop();
+console.log(rickAndMortyCharacters1);
+console.log(rickAndMortyCharacters1[0]);
+console.log(rickAndMortyCharacters1[rickAndMortyCharacters1.length - 1]);
 
 //1.6 Elimina el segundo elemento del array y muestra el array por consola.
 //const rickAndMortyCharacters = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];
+
+const rickAndMortyCharacters2 = [
+  "Rick",
+  "Beth",
+  "Jerry",
+  "Morty",
+  "Summer",
+  "Lapiz Lopez",
+];
+
+delete rickAndMortyCharacters2[1];
+console.log(rickAndMortyCharacters2);
