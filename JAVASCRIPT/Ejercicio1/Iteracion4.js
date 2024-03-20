@@ -55,3 +55,5 @@ const rickAndMortyCharacters2 = [
 
 rickAndMortyCharacters2.splice(1, 1);
 console.log(rickAndMortyCharacters2);
+//delete rickAndMortyCharacters2[1];
+//console.log(rickAndMortyCharacters2);
