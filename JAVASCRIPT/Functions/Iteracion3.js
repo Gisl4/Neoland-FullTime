@@ -16,7 +16,7 @@ const numbers = [1, 2, 3, 5, 45, 37, 58];
 const sumAll = (array) => {
   let sumaNums = 0;
 
-  for (i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     sumaNums += numbers[i];
   }
   return sumaNums;
