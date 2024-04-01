@@ -1,0 +1,19 @@
+h1 {
+  color: #c92a2a;
+  font-family: "Marcellus SC", serif;
+}
+
+h2 {
+  color: #a61e4d;
+  font-family: "Marcellus SC", serif;
+}
+
+.first {
+  color: #364fc7;
+  font-family: "Marcellus SC", serif;
+}
+
+.second {
+  border-bottom: 1px solid #a61e4d;
+  font-family: "Marcellus SC", serif;
+}

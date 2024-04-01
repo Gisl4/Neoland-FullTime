@@ -17,15 +17,17 @@ const duplicates = [
   "soda",
 ];
 
-const removeDuplicates = (param) => {
-  const lista = [];
-
-  for (i = 0; i < param.length; i++) {
-    if (!lista.includes(param[i])) {
-      lista.push(param[i]);
+function removeDuplicates(param) {
+  for (let resultado of param) {
+    for (let resultado2 of param.slice(param.indexOf(resultado) + 1)) {
+      if (resultado === resultado2) {
+        param.splice(param.indexOf(resultado2), 1);
+      }
     }
   }
-  return lista;
-};
-
+  return param;
+}
 console.log(removeDuplicates(duplicates));
+
+//*resultado2 se pone como subArray para devolver una copia con slice...
+//*con el indexOf buscamos el indice y se suma 1

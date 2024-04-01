@@ -17,28 +17,6 @@ const counterWords = [
   "code",
 ];
 
-// console.log(repeatCounter(counterWords));
-// function repeatCounter(param) {
-// let count = [];
-// let array2 = [];
-// for(let i = 0; i < param.legth; i++){
-// count = 0;
-// for(let x = i; x <param.legth; x++){
-// if(param[i] === param[x]){
-// count ++;
-// }
-// }
-// console.log(param[i]);
-// console.log(array. includes(param[i]));
-// if(!array.includes(param[i])){
-// console.log(anadimos (param[i]));
-// array.push([param[i],count]);
-// }
-// console.log(array);
-// }
-// }
-// return array;
-
 function repeatCounter(param) {
   const wordCounts = {};
   for (const word of param) {
@@ -55,3 +33,5 @@ const result = repeatCounter(counterWords);
 for (const word in result) {
   console.log(`'${word}' aparece ${result[word]} veces.`);
 }
+
+//*se crea un objeto vacio, luego se itera a traves del array counterwords para asi devolver el numero de veces que se repite.

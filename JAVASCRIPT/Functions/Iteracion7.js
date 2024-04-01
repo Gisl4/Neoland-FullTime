@@ -18,10 +18,11 @@ const nameFinder = [
   "Jessica",
   "Marc",
 ];
-function finderName(param) {
-  function finderName(param, param1) {
-    return param.includes(param1)
-      ? [param.includes(param1), param.indexOf(param1)]
-      : false;
+
+const finderName = (param, valor) => {
+  for (let i = 0; i < param.length; i++) {
+    param[i] === valor ? console.log(`true ${i}`) : console.log("false");
   }
-}
+};
+const nuevoArray = finderName(nameFinder, "Steve");
+console.log(nuevoArray);

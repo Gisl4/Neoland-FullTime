@@ -9,7 +9,7 @@ const averageWord = (array) => {
   let sumaNum = 0;
   let sumaString = 0;
 
-  for (i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (typeof array[i] === "number") {
       sumaNum += array[i];
     } else if (typeof array[i] === "string") {
@@ -19,4 +19,7 @@ const averageWord = (array) => {
   return { sumaNum, sumaString };
 };
 
-console.log(averageWord(mixedElements));
+const result = averageWord(mixedElements);
+console.log(result);
+
+//*sumaNum para la suma de valores numericos y sumaString suma de longitudes

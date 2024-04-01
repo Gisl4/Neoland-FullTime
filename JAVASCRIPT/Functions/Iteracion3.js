@@ -5,21 +5,10 @@
 
 // Puedes usar este array para probar tu función:
 
-// const numbers = [1, 2, 3, 5, 45, 37, 58];
-
-// function sumAll(param) {
-// // insert code
-// }
-
 const numbers = [1, 2, 3, 5, 45, 37, 58];
 
-const sumAll = (array) => {
-  let sumaNums = 0;
+const sumaTotal = numbers.reduce((sumaNums, numbers) => sumaNums + numbers, 0);
 
-  for (let i = 0; i < array.length; i++) {
-    sumaNums += numbers[i];
-  }
-  return sumaNums;
-};
+console.log(sumaTotal);
 
-console.log(sumAll(numbers));
+//* Se usa reduce para la suma de elementos del array
