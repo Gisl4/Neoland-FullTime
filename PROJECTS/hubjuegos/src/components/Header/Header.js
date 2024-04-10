@@ -16,7 +16,7 @@ const template = () => `
       id="changeColor"
     />
     <img
-      src="https://res.cloudinary.com/dq186ej4c/image/upload/v1682685633/home_nekvs0.png"
+      src="https://res.cloudinary.com/dhshflrbz/image/upload/v1712435647/juegos/3408506_hbhuv1.png"
       alt=" navigate to home app"
       id="buttonDashboard"
     />

@@ -1,0 +1,145 @@
+.topoFont {
+  font-family: cursive;
+  background: url("https://res.cloudinary.com/dhshflrbz/image/upload/v1712580703/linea-controladores-videojuegos-fondo-azul-solido_176841-2022_efkqda.avif");
+  color: white;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  text-align: left;
+  padding-top: 7vh;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5rem;
+  line-height: 1;
+  margin-top: 45px;
+}
+
+.score {
+  color: #fec5e5;
+  background: #fd5da8;
+  padding: 1rem;
+  line-height: 1;
+  border-radius: 1rem;
+  display: inline-block;
+}
+
+.controls {
+  margin: 5px;
+  text-align: center;
+}
+
+.start-btn {
+  padding: 10px 25px;
+  outline: none;
+  font-style: 24px;
+  background-color: #fd5da8;
+  color: white;
+  border: 0px;
+  box-shadow: 1px 2px 4px #520324;
+  cursor: pointer;
+}
+
+.start-btn:hover {
+  background: #c93c89;
+  box-shadow: 1px 2px 4px #b61e71;
+}
+
+.levels {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.levels > div {
+  margin: 20px;
+}
+
+.levels > div:nth-child(1) {
+  color: aqua;
+}
+/*Este selector coincide con cada elemento que sea 
+nth child, del mismo tipo de su padre
+Esta posicionandose el primer hijo de la galeria*/
+.levels > div:nth-child(2) {
+  color: yellow;
+}
+
+.levels > div:nth-child(3) {
+  color: greenyellow;
+}
+
+.game {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  /*cada hoyo del juego*/
+  background: url("https://res.cloudinary.com/dhshflrbz/image/upload/v1712564279/juegos/hole_bmol93.png")
+    bottom center no-repeat;
+  background-size: contain;
+  content: "";
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+.mole {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  background: url("https://res.cloudinary.com/dhshflrbz/image/upload/v1712534113/juegos/mole_gx3rvn.png")
+    bottom center no-repeat;
+  background-size: 60%;
+  transition: all 0.4s;
+  cursor: pointer;
+} /*Cuando salen de un agujero y se vuelven visible*/
+
+.hole.up .mole {
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    padding: 20px;
+    font-style: 2rem;
+  }
+
+  .score {
+    margin: 20px;
+  }
+
+  .hole::after {
+    bottom: -22px;
+    margin: 6px;
+  }
+
+  .start-btn {
+    padding: 8px 20px;
+  }
+
+  .levels > div {
+    margin: 10px;
+  }
+
+  .game {
+    width: 90%;
+    height: 300px;
+  }
+}

@@ -54,7 +54,6 @@ const addListeners = () => {
 //! ------------------------------------------------------------------------------
 export const PrintPokemonPage = () => {
   document.querySelector("main").innerHTML = template();
-
   PrintTemplateSpinner();
   PrintSpinner();
   dataService();

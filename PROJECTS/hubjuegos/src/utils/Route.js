@@ -1,5 +1,11 @@
 import { getUser } from "../global/state/globalState";
-import { Login, PrintPokemonPage, printTemplateDashboard } from "../pages";
+import {
+  Login,
+  PrintPokemonPage,
+  printTemplateDashboard,
+  printWhakaTopo,
+  PrintTresEnRaya,
+} from "../pages";
 
 export const initControler = (pagesRender) => {
   switch (pagesRender) {
@@ -13,13 +19,16 @@ export const initControler = (pagesRender) => {
       printTemplateDashboard();
       break;
     case "Topo":
-      "PrintTopoPage() -----> en caso de que lo haya";
+      printWhakaTopo();
       break;
     case "Login":
       Login();
       break;
     case "Memory":
       "PrintMemoryPage() ------> en caso de que lo haya";
+      break;
+    case "TresEnRaya":
+      PrintTresEnRaya();
       break;
   }
 };
