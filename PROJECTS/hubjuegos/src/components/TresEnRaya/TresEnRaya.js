@@ -1,19 +1,34 @@
-let boxes = document.querySelectorAll(".box");
-
 let turn = "X";
 let isGameOver = false;
+let boxes;
 
-boxes.forEach((e) => {
-  e.innerHTML = "";
-  e.addEventListener("click", () => {
-    if (!isGameOver && e.innerHTML === "") {
-      e.innerHTML = turn;
-      cheakWin();
-      cheakDraw();
-      changeTurn();
-    }
+export function starBox() {
+  boxes = document.querySelectorAll(".box");
+  boxes.forEach((e) => {
+    e.innerHTML = "";
+    e.addEventListener("click", () => {
+      if (!isGameOver && e.innerHTML === "") {
+        e.innerHTML = turn;
+        cheakWin();
+        cheakDraw();
+        changeTurn();
+      }
+    });
   });
-});
+  document.querySelector("#play-again").addEventListener("click", () => {
+    isGameOver = false;
+    turn = "X";
+    document.querySelector(".bg").style.left = "0";
+    document.querySelector("#results").innerHTML = "";
+    document.querySelector("#play-again").style.display = "none";
+
+    boxes.forEach((e) => {
+      e.innerHTML = "";
+      e.style.removeProperty("background-color");
+      e.style.color = "#FC9483";
+    });
+  });
+}
 
 function changeTurn() {
   if (turn === "X") {
@@ -67,17 +82,3 @@ function cheakDraw() {
     }
   }
 }
-
-document.querySelector("#play-again").addEventListener("click", () => {
-  isGameOver = false;
-  turn = "X";
-  document.querySelector(".bg").style.left = "0";
-  document.querySelector("#results").innerHTML = "";
-  document.querySelector("#play-again").style.display = "none";
-
-  boxes.forEach((e) => {
-    e.innerHTML = "";
-    e.style.removeProperty("background-color");
-    e.style.color = "#FC9483";
-  });
-});

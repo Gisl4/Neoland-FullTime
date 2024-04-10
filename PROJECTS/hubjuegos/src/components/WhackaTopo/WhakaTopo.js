@@ -8,11 +8,13 @@ let levels;
 let game;
 let timeUp = false;
 let score = 0;
-
+//variabes globales
+//elementos
 function initialize() {
   holes = document.querySelectorAll(".hole");
   moles = document.querySelectorAll(".mole");
-  scoreBoard = document.querySelector(".score"); // Seleccionar todos los elementos del DOM.
+  scoreBoard = document.querySelector(".score");
+  // Seleccionar todos los elementos del DOM.
   startBtn = document.querySelector(".start-btn");
   levels = document.querySelector(".levels");
   game = document.querySelector(".game");
@@ -21,11 +23,13 @@ function initialize() {
   startBtn.disabled = true;
   levels.style.visibility = "hidden";
   moles.forEach((mole) => mole.addEventListener("click", hitTheMole));
+  //mole es iterable contiene elementos HTML, el forEach itera cada elemento sobre moles, hitmole manejra el evento click
+  //aumentando la puntuacion... addEventoListener gestiona los eventos especificos
 }
 
 export function startGame() {
   initialize();
-  // Se realiza un llamado al hacer click en el boton de inicio
+  // Se realiza el llamado al hacer click en el boton de inicio
   let show, hide;
   const difficulty = difficultyLevel();
   if (difficulty === "easy") {
@@ -46,7 +50,7 @@ export function startGame() {
     startBtn.innerHTML = "Comenzar!";
     startBtn.disabled = false;
     levels.style.visibility = "visible";
-  }, 15000);
+  }, 15000); //Duracion del juego
 }
 
 function difficultyLevel() {
@@ -59,34 +63,41 @@ function difficultyLevel() {
   // obtener el valor del radio en el boton
 }
 
+//ramdomTime calcula el intervalo del tiempo aleatorio
+//ramdomHole seleccion del agujero al azar
+
 function randomTime(min, max) {
   return Math.round(Math.random() * (max - min) + min);
   // Obtener el tiempo aleatorio entre min y max
 }
 
+//*randomHole() devuelve un elemento al agujero
+//*idx indice entre 0 y 5, un rango de indices validos
 function randomHole(holes) {
   let lastHole;
   const idx = Math.floor(Math.random() * holes.length);
   const hole = holes[idx];
   if (hole === lastHole) {
+    console.log("duplicate hole");
     return randomHole(holes);
   }
-  lastHole = hole;
+  lastHole = hole; //el agujero mas reciente se almacena en idx.lasthole
   return hole;
   // Para obtener un agujero aleatorio
 }
 
+//Hace la aparicion y desaparición del topo durante un periodo de tiempo
 function peep(show, hide) {
   const time = randomTime(show, hide);
   const hole = randomHole(holes);
-  hole.classList.add("up");
+  hole.classList.add("up"); //Se llama a si mismo si el juego se esta ejecutando correctamente
   setTimeout(() => {
     hole.classList.remove("up");
     if (!timeUp) {
       peep(show, hide);
     }
   }, time);
-  // Hacer que el topo aparezca y desaparezca
+  //show y hide representan los tiempos en los que el topo debe aparecer y desaparecer aleatorio
 }
 
 function hitTheMole(e) {
@@ -94,6 +105,7 @@ function hitTheMole(e) {
     return;
   }
   score++;
-  this.parentNode.classList.remove("up");
-  scoreBoard.textContent = score;
+  this.parentNode.classList.remove("up"); // eliminar la clase del nodo padre y afecta el comportamiento del elemento
+  scoreBoard.textContent = score; // se ejecuta al ocurrir el evento y al realizar accion del golpe
 }
+//(e) representa el evento click, si el evento es confiable(isTrusted)

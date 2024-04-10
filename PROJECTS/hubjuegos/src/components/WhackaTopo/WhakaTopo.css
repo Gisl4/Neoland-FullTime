@@ -1,3 +1,6 @@
+/** {
+    box-sizing: border-box;*/
+
 .topoFont {
   font-family: cursive;
   background: url("https://res.cloudinary.com/dhshflrbz/image/upload/v1712580703/linea-controladores-videojuegos-fondo-azul-solido_176841-2022_efkqda.avif");
@@ -99,6 +102,7 @@ Esta posicionandose el primer hijo de la galeria*/
   bottom: -30px;
 }
 
+/*Se agregara el div con JS*/
 .mole {
   position: absolute;
   top: 100%;
@@ -109,8 +113,10 @@ Esta posicionandose el primer hijo de la galeria*/
   background-size: 60%;
   transition: all 0.4s;
   cursor: pointer;
-} /*Cuando salen de un agujero y se vuelven visible*/
+}
+/*Cuando sale de un agujero y se vuelven visible*/
 
+/*Up para hacerlo visible*/
 .hole.up .mole {
   top: 0;
 }

@@ -1,5 +1,5 @@
 import "./TresEnRaya.css";
-
+import { starBox } from "../../components/TresEnRaya/TresEnRaya";
 const template = () => `
 <div class="raya">  
 <div class="turn-container">
@@ -26,6 +26,7 @@ const template = () => `
 
 export const PrintTresEnRaya = () => {
   document.querySelector("main").innerHTML = template();
+  starBox();
   //   PrintTemplateSpinner();
   //   PrintSpinner();
   //   dataService();
