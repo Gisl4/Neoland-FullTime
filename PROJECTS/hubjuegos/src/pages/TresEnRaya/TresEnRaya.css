@@ -1,11 +1,13 @@
+/*Centrar los elementos horizontal y verticalmente*/
 .align {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /*centrar los elementos horizontales*/
+  align-items: center; /*centrar los elementos verticales*/
 }
 
+/*Fondo*/
 .raya {
-  background: url("https://res.cloudinary.com/dhshflrbz/image/upload/v1712504082/juegos/42513439-elegante-elegante-papel-tapiz-floral-abstracto-patr%C3%B3n-sin-costuras_koud2a.jpg");
+  background: url("https://res.cloudinary.com/dhshflrbz/image/upload/v1713045886/maxresdefault_dcaolp.jpg");
   background-size: cover;
   margin: 0;
   padding: 0;
@@ -40,6 +42,7 @@
   border-right: none;
 }
 
+/**Fondo adicional*/
 .bg {
   position: absolute;
   bottom: 0;
@@ -50,6 +53,7 @@
   z-index: -1;
 }
 
+/*Cuadricula principal*/
 .main-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -61,6 +65,7 @@
   box-shadow: 10px 10px 3px rgb(141, 77, 132);
 }
 
+/*La Caja interactiva*/
 .box {
   cursor: pointer;
   font-size: 2rem;
@@ -72,8 +77,9 @@
   background-color: rgb(216, 173, 181);
 }
 
+/*Boton*/
 #play-again {
-  background-color: pink;
+  background-color: #ffc0cb;
   padding: 10px 25px;
   border: none;
   font-size: 1.2rem;
@@ -86,4 +92,18 @@
   padding: 10px 40px;
   background-color: rgb(107, 14, 79);
   color: rgb(230, 11, 219);
+}
+
+@media (max-width: 376px) {
+  #raya {
+    padding: 0;
+  }
+  .turn-container {
+    box-sizing: content-box;
+    width: 17.5em;
+
+    background-color: #ffffff62;
+    border-radius: 0px;
+    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  }
 }

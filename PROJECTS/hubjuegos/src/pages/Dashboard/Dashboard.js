@@ -50,6 +50,16 @@ const template = () => `
           <h2>TRES EN RAYA</h2>
         </figure>
       </li>
+      <li>
+        <li>
+        <figure id="navigateAhorcado">
+          <img
+            src="https://res.cloudinary.com/dhshflrbz/image/upload/v1712848425/Juego_Ahorcado/mu%C3%B1eco_b4uuur.png"
+            alt="go to page Ahorcado"
+          />
+          <h2>AHORCADO</h2>
+        </figure>
+      </li>
     </ul>
   </div>
 `;
@@ -66,6 +76,10 @@ const addEventListeners = () => {
   const navigateTresEnRaya = document.getElementById("navigateTresEnRaya");
   navigateTresEnRaya.addEventListener("click", () => {
     initControler("TresEnRaya");
+  });
+  const navigateAhorcado = document.getElementById("navigateAhorcado");
+  navigateAhorcado.addEventListener("click", () => {
+    initControler("Ahorcado");
   });
 };
 
