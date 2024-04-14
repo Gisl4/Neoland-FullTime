@@ -9,9 +9,9 @@
   & main {
     padding-top: 20vh;
     min-height: 90vh;
-    padding-bottom: 10vh;
+    padding-bottom: 0vh;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
   }
 
