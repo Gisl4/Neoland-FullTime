@@ -43,7 +43,8 @@ const template = () => `
         <div class="mole"></div>
       </div>
     </div>
-    </div>`;
+  </div>
+  `;
 
 //! ------------------------------------------------------------------------------
 //? ---------------------FUNCION QUE SE EXPORTA QUE PINTA LA PAGINA--------------

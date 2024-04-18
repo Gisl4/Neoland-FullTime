@@ -6,16 +6,16 @@
   background: url("https://res.cloudinary.com/dhshflrbz/image/upload/v1713045886/maxresdefault_dcaolp.jpg");
   color: white;
   background-size: cover;
-  margin: 30px;
-  padding: 5px;
+  margin: 0;
+  padding: 0;
   width: 100vw;
+  text-align: left;
+  padding-top: 7vh;
 }
 
 h1 {
   text-align: center;
   font-size: 3rem;
-  line-height: 1;
-  margin-top: 45px;
 }
 
 .score {
@@ -107,7 +107,7 @@ Esta posicionandose el primer hijo de la galeria*/
   top: 100%;
   width: 100%;
   height: 100%;
-  background: url("https://res.cloudinary.com/dhshflrbz/image/upload/v1712534113/juegos/mole_gx3rvn.png")
+  background: url("https://res.cloudinary.com/dhshflrbz/image/upload/v1713198110/1835817_v6x3rs.png")
     bottom center no-repeat;
   background-size: 60%;
   transition: all 0.4s;
@@ -120,22 +120,6 @@ Esta posicionandose el primer hijo de la galeria*/
   top: 0;
 }
 
-/* ---------IPHONE  SE --------- */
-@media (max-width: 376px) {
-  #topoFont {
-    padding: 0;
-  }
-  .h1 {
-    box-sizing: content-box;
-    width: 17.5em;
-
-    background-color: #ffffff62;
-    border-radius: 0px;
-    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
-  }
-}
-
-/*-----TABLET--------*/
 @media (max-width: 768px) {
   h1 {
     padding: 20px;

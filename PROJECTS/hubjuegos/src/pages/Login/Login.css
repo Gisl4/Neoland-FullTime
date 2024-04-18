@@ -1,3 +1,7 @@
+input:focus {
+  background-color: rgb(226, 189, 201);
+}
+
 #containerLogin {
   width: 100%;
 
@@ -10,6 +14,7 @@
   & #titleLogin {
     margin: 2rem;
     font-size: 4em;
+    color: #fa9f6b;
   }
 
   & input {
@@ -17,25 +22,26 @@
     height: 40px;
     border-radius: 5px;
     padding: 10px;
+    color: #0036e7;
   }
 
   & button {
     width: 300px;
     height: 40px;
     margin: 20px;
-    background-color: #0def03;
+    background-color: palevioletred;
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    -webkit-box-shadow: 0px 4px 10px -3px rgba(0, 0, 0, 0.61);
-    -moz-box-shadow: 0px 4px 10px -3px rgba(0, 0, 0, 0.61);
-    box-shadow: 0px 4px 10px -3px rgba(0, 0, 0, 0.61);
+    -webkit-box-shadow: 0px 4px 10px -3px rgba(175, 11, 107, 0.61);
+    -moz-box-shadow: 0px 4px 10px -3px rgba(175, 11, 107, 0.61);
+    box-shadow: 0px 4px 10px -3px rgba(175, 11, 107, 0.61);
 
     transition: ease-in-out 0.1s;
     &:hover {
-      -webkit-box-shadow: 0px 2px 5px -3px rgba(0, 0, 0, 0.61);
-      -moz-box-shadow: 0px 2px 5px -3px rgba(0, 0, 0, 0.61);
-      box-shadow: 0px 2px 5px -3px rgba(0, 0, 0, 0.61);
+      -webkit-box-shadow: 0px 2px 5px -3px rgba(175, 11, 107, 0.61);
+      -moz-box-shadow: 0px 2px 5px -3px rgba(175, 11, 107, 0.61);
+      box-shadow: 0px 2px 5px -3px rgba(175, 11, 107, 0.61);
 
       transform: scale(0.98);
     }

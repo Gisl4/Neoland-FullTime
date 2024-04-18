@@ -1,6 +1,6 @@
 import "./Footer.css";
 const template = () => `
-<h3><span>With 💘 to </span> Neoland</h3>
+<h3><span>Gaming </span> Zone</h3>
 `;
 
 export const PrintTemplateFooter = () => {

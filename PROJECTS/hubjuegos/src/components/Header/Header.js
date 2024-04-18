@@ -5,23 +5,23 @@ import "./Header.css";
 
 const template = () => `
   <img
-    src="https://res.cloudinary.com/dq186ej4c/image/upload/v1682679162/header_giqdug.jpg"
+    src="https://res.cloudinary.com/dhshflrbz/image/upload/v1713198363/f620c11a290a6fdccb49409c56c6bed3-game-zone-badge_o3yxja.webp"
     alt="title hub game website (app)"
     class="logo"
   />
   <nav>
     <img
-      src="https://res.cloudinary.com/dq186ej4c/image/upload/v1682684561/changeColor_tat29q.png"
+      src="https://res.cloudinary.com/dhshflrbz/image/upload/v1713201147/4621967_gmwf8h.png"
       alt=" change to style mode page"
       id="changeColor"
     />
     <img
-      src="https://res.cloudinary.com/dhshflrbz/image/upload/v1712435647/juegos/3408506_hbhuv1.png"
+      src="https://res.cloudinary.com/dhshflrbz/image/upload/v1713201026/550484_r23v3t.png"
       alt=" navigate to home app"
       id="buttonDashboard"
     />
     <img
-      src="https://res.cloudinary.com/dq186ej4c/image/upload/v1682679055/logout_arz0gw.png"
+      src="https://res.cloudinary.com/dhshflrbz/image/upload/v1713197902/3094700_rarbkx.png"
       alt="logout"
       id="buttonLogout"
     />

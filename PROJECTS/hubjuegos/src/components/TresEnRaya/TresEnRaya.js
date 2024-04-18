@@ -61,7 +61,7 @@ function cheakWin() {
       document.querySelector("#results").innerHTML = turn + "  Gana👏🎉";
       document.querySelector("#play-again").style.display = "inline";
 
-      for (j = 0; j < 3; j++) {
+      for (let j = 0; j < 3; j++) {
         boxes[winConditions[i][j]].style.backgroundColor = "#F987C5";
         boxes[winConditions[i][j]].style.color = "#A1045A";
       }

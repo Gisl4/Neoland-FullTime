@@ -1,3 +1,7 @@
+body {
+  --dile-modal-background-color: #f4f4ff;
+}
+
 #filterButton {
   display: flex;
   flex-wrap: wrap;

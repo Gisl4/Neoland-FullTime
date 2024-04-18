@@ -3,7 +3,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #0d0d0d;
+  background: #f82d97;
   -webkit-box-shadow: 0px 8px 30px -3px rgba(0, 0, 0, 0.61);
   -moz-box-shadow: 0px 8px 30px -3px rgba(0, 0, 0, 0.61);
   box-shadow: 0px 8px 30px -3px rgba(0, 0, 0, 0.61);
@@ -11,8 +11,8 @@ footer {
   bottom: 0;
   width: 100%;
   z-index: 100;
-  color: #0def03;
+  color: rgb(130, 238, 162);
   & span {
-    color: white;
+    color: rgb(160, 184, 22);
   }
 }

@@ -17,7 +17,7 @@ const template = () => `
       <li>
         <figure id="navigateWhakaTopo">
           <img
-            src="https://res.cloudinary.com/dhshflrbz/image/upload/v1712756831/mole-png-5_jg9xds.jpg"
+            src="https://res.cloudinary.com/dhshflrbz/image/upload/v1713198110/1835817_v6x3rs.png"
             alt=" go to wacka topo game"
           />
           <h2>WACKA TOPO</h2>
