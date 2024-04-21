@@ -1,24 +1,23 @@
-const express = require("express"); // controla la ruta
+const express = require("express");
 const UserRoutes = express.Router();
 
-const { registerLargo } = require("../controllers/User.controllers"); //controlador
+const {
+  registerLargo,
+  registerUtil,
+  registerWithRedirect,
+  sendMailRedirect,
+} = require("../controllers/User.controllers");
 const { upload } = require("../../middleware/files.middleware");
 
-//!------------------------------------------------------------------------
 //?--------------------------------RUTAS SIN REDIRECT----------------------
-//!------------------------------------------------------------------------
-// Una ruta llama a otra ruta.
-// confifuar y traer las rutas
-//crea elemento-registerLargo
 
 UserRoutes.post("/registerLargo", upload.single("image"), registerLargo);
-//upload.single("image")---es el middleware de subida de fichero
+UserRoutes.post("/registerUtil", upload.single("image"), registerUtil);
 
+//?--------------------------------RUTAS CON REDIRECT----------------------
+
+UserRoutes.post("/register", upload.single("image"), registerWithRedirect);
+
+//?------------------------------- REDIRECT-------------------------------
+UserRoutes.post("/register/sendMail/:id", sendMailRedirect); //id del usuario para enviar el email
 module.exports = UserRoutes;
-
-//?____________________________________________________________________________________________
-//cuando se ultiliza la libreria se tiene que importar.
-//UserRouters = es un objeto complejo
-
-//!metodos en una API: GET(lectura), DELETE(borrado), POST(crear elemento en el backend), PATCH(actualizar parcialemnte), PUT(actualizacion total),
-//! Index utiliza las rutas

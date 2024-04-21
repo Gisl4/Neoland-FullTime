@@ -7,3 +7,15 @@
 // Sugerencia de función:
 
 function findArrayIndex(array, text) {}
+
+const arrayPrueba = ["Caracol", "Mosquito", "Salamandra", "Ajolote"];
+
+function findArrayIndex(array, text) {
+  for (i = 0; i < array.length; i++) {
+    if (text == array[i]) {
+      console.log(i);
+    }
+  }
+}
+
+console.log(findArrayIndex(arrayPrueba, "Mosquito"));

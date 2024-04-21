@@ -1,46 +1,43 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const { connect } = require("./src/utils/db");
-//! ----------------------------------------------------------
+
 //?------------------ creamos el servidor web------------------
-//! ----------------------------------------------------------
+
 const app = express();
 
 // vamos a configurar dotenv para poder utilizar las variables d entorno del .env
 dotenv.config();
-//! ----------------------------------------------------------
+
 //? ------------conectamos con la base de datos---------------
-//! ----------------------------------------------------------
+
 connect();
 
-//! ----------------------------------------------------------
 //?- ------------------- configurar cloudinary ----------------
-//! ----------------------------------------------------------
+
 const { configCloudinary } = require("./src/middleware/files.middleware");
 configCloudinary();
 //! -----------------VARIABLES CONSTANTES --> PORT
 
 const PORT = process.env.PORT;
 
-//! ----------------------------------------------------------
 //?- ------------------- CORS -------------------------------
-//! ----------------------------------------------------------
+
 const cors = require("cors");
 
 app.use(cors());
+
+//? ------------------ limitaciones de cantidad en el back end-----
+
+app.use(express.json({ limit: "5mb" }));
+app.use(express.urlencoded({ limit: "5mb", extended: false }));
 
 //! ----------------- ----------------------------------------
 //? -----------------ROUTAS ---------------------------------
 //! ----------------- ----------------------------------------
 const UserRoutes = require("./src/api/routes/User.routes");
 
-app.use("/api/v1/users/", UserRoutes); //Ruta que va hacer el endpoint
-
-//! --------------------------------------------------------------
-//? ------------------ limitaciones de cantidad en el back end-----
-//! ---------------------------------------------------------------
-app.use(express.json({ limit: "5mb" }));
-app.use(express.urlencoded({ limit: "5mb", extended: false }));
+app.use("/api/v1/users/", UserRoutes);
 
 //! ----------------------------------------------------------
 //? -----------------  ERRORES GENERALES Y RUTA NO ENCONTRADA
@@ -67,13 +64,3 @@ app.disable("x-powered-by");
 app.listen(PORT, () =>
   console.log(`Server listening on port 👌🔍 http://localhost:${PORT}`)
 );
-
-//?____________________________________________________________________________________________
-
-//! El final de una ruta = endPoint
-//! 200 todo correcto
-//! 404 error
-//! 500 unexpected error
-
-//! Cuando no se tiene nodemodule se tiene que instalar la dependencia
-//!package.jso se cuando se ha lanzado en el servidor

@@ -1,8 +1,8 @@
 const bcrypt = require("bcrypt"); // para encryptar informacion
-const validator = require("validator"); /// n os sirve para validad info
-const mongoose = require("mongoose");
+const validator = require("validator"); /// nos sirve para validad info
+const mongoose = require("mongoose"); //crea los datos
 
-// el nombre del esquema en mayusculas
+// El nombre del esquema en mayusculas (definicion de los datos que tenemos en un modelo)
 const UserSchema = new mongoose.Schema(
   {
     email: {
@@ -44,7 +44,7 @@ const UserSchema = new mongoose.Schema(
       default: false,
     },
     image: {
-      type: String,
+      type: String, //El string nos va a dar una URL para meter en imagen.
     },
   },
   {
@@ -55,7 +55,7 @@ const UserSchema = new mongoose.Schema(
 
 UserSchema.pre("save", async function (next) {
   try {
-    this.password = await bcrypt.hash(this.password, 10);
+    this.password = await bcrypt.hash(this.password, 10); //! No encriptar mas de 10 veces.
     next();
     // el next puede lanzar al log o puede decir que continuemos
   } catch (error) {

@@ -1,14 +1,10 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const { connect } = require("./src/utils/db");
-
-//dotenv = permite crear un archivo dentro de nuestro código y agregar los datos que queremos
-//ocultar del programa para asignarles una variable para asi usarlas en el programa.
 //! ----------------------------------------------------------
-//?#------------------ creamos el servidor web------------------
+//?------------------ creamos el servidor web------------------
 //! ----------------------------------------------------------
 const app = express();
-//express = genera el freenware para el servidor web
 
 // vamos a configurar dotenv para poder utilizar las variables d entorno del .env
 dotenv.config();
@@ -24,17 +20,11 @@ const PORT = process.env.PORT;
 //! ----------------------------------------------------------
 //?- ------------------- CORS -------------------------------
 //! ----------------------------------------------------------
-//configuracion con la libreria para traer todos los metodos de las cors
+//  Las cors dan acceso a la api
 
 const cors = require("cors");
 
 app.use(cors());
-
-//! ----------------- ----------------------------------------
-//? -----------------ROUTAS ---------------------------------
-//! ----------------- ----------------------------------------
-//models=> controllers=>routes=>index   <=endpoint |middleware|
-// Los modelos consumen los controladores, los controladores consumen los routes y las rutas consumen el index
 
 //! --------------------------------------------------------------
 //? ------------------ limitaciones de cantidad en el back end-----
@@ -42,9 +32,14 @@ app.use(cors());
 app.use(express.json({ limit: "5mb" }));
 app.use(express.urlencoded({ limit: "5mb", extended: false }));
 
-//extended=diferente forma de enviar los datos... parsearlos de una forma mas optimizada
+// El extended en "true" hace una forma diferente de enviar los datos, que nos permite parsear los objetos de una forma mas optimizada
+// El extended en "false" hace el envio mas rapido y genera menos problemas (querystring es mas rapido, qs mas lento, permite parseos de datos mas optimizados).
+//! ----------------- ----------------------------------------
+//? -----------------ROUTAS ---------------------------------
+//! ----------------- ----------------------------------------
+
 //! ----------------------------------------------------------
-//? -----------------  ERRORES GENERALES Y RUTA NO ENCONTRADA
+//? ----------ERRORES GENERALES Y RUTA NO ENCONTRADA----------
 //! ----------------------------------------------------------
 
 app.use("*", (req, res, next) => {
@@ -62,16 +57,14 @@ app.use((error, req, res) => {
 });
 
 //! ------------------------------------------------------------------
-//? ------------------ ESCUCHAMOS EN EL PUERTO EL SERVIDOR WEB--------
+//? ------------ ESCUCHAMOS EN EL PUERTO EL SERVIDOR WEB--------------
 //! ------------------------------------------------------------------
-// listen = poner en que puerto esta habilitado para que el servidor se este escuchando ya sea por el exterior o localhost
+// "listening"-poner en que puerto esta habilitado para que se escuche por parte del exterior
+
+/// app-listen(PORT, () =>
+/// console.log(`Server listening on port 👌🔍 http://localhost:${PORT}`));
+
 app.disable("x-powered-by");
 app.listen(PORT, () =>
   console.log(`Server listening on port 👌🔍 http://localhost:${PORT}`)
 );
-
-//?_______________________________________________________________________________________________________________________________________
-//! Cors es una libreria que sirve para configurar el acceso de la API
-//! json.parse= un string lo convertimos a un objeto que sea legible por parte de js.
-//! querystring(extended: false) tiende a ser más rápido ---- qs(extended: true) es más potente y flexible.
-//! Con la librería mogoose nos conectamos a mongodb

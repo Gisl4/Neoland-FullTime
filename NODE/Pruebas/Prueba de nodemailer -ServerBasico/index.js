@@ -7,7 +7,7 @@ dotenv.config();
 // ----- NOS TRAEMOS EL PUERTO DEL .ENV
 const PORT = process.env.PORT;
 
-// ----- CONFIGURAMOS EN NUEVO SERVIDOR WEB
+// ----- CONFIGURAMOS EN NUEVO SERVIDOR WEB---
 const server = express();
 
 //-------CONFIGURAMOS EL ROUTER DE EXPRESS PARA PROBAR NODEMAILER ------
@@ -26,7 +26,7 @@ router.get("/sendNewMail", (req, res, next) => {
 
   const mailOptions = {
     from: email,
-    to: "giisneoland@gmail.com",
+    to: "escaneruclm@gmail.com",
     subject: "Confirmation TEST NODEMAILER",
     text: `ok todo bien`,
   };

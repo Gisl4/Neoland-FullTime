@@ -5,11 +5,12 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 //Creamos el almacen
+//// new = instansear
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
-    folder: "userProyect04FT",
-    allowedFormats: ["jpg", "png", "jpeg", "gif", "svg", "webp"],
+    folder: "userProyectFullTime",
+    allowedFormats: ["jpg", "png", "jpeg", "gif", "svg", "webp"], //svg-imagen de subida en vectorial  webp-formato grafico para que sean mas optimizadas a la hora de renderizar.
   },
 });
 
@@ -28,6 +29,7 @@ const deleteImgCloudinary = (imgUrl) => {
   });
 };
 
+//sirve para configurarlo
 const configCloudinary = () => {
   cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,

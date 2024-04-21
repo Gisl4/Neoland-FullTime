@@ -1,7 +1,6 @@
 {
   "name": "arquitectura",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js"
@@ -16,5 +15,6 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mongoose": "^8.3.1"
-  }
+  },
+  "description": ""
 }

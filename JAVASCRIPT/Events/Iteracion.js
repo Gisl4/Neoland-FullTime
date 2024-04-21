@@ -15,12 +15,3 @@ const value = document.getElementsByClassName("value");
 value[0].addEventListener("input", (event) => {
   console.log("El input:", event.target.value);
 });
-
-//
-// const n = document.getElementById("prueba");
-
-// n.addEventListener("click", (event) => {
-// console.log("Evento de clic:", event);
-// console.log(foc[0]);
-// console.log(btn);
-// });

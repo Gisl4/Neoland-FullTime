@@ -17,10 +17,10 @@ for (let i = 0; i < 10; i++) {
 // Muestra por consola un mensaje diciendo 'Intentando dormir 🐑' en cada vuelta del bucle
 // y cambia el mensaje en la décima vuelta a 'Dormido!'.
 
-for (let i = 0; i < 10; i++) {
-  if (i === 9) {
+for (let i = 0; i < 11; i++) {
+  if (i === 10) {
     console.log("Dormido!");
   } else {
-    console.log("Intentando dormir 🐑");
+    console.log("Intentando dormir 🐑  " + (i + 1));
   }
 }

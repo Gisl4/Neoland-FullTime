@@ -1,20 +1,18 @@
-const express = require("express");
-const dotenv = require("dotenv");
-const cors = require("cors");
-const { connect } = require("./src/utils/db");
+// REQUERIMOS LAS LIBRERIAS Y CONFIGURAMOS DOTENV
 
-// creamos el servidor web
+const express = require("express"); //liberias
+const dotenv = require("dotenv");
+const cors = require("cors"); //barreras de quien puede acceder a la API... libreria con una configuracion inicial
+dotenv.config();
+//siempre configurar para que funcione
+
+/// CREAR SERVIDOR WEB
 const app = express();
 
-// vamos a configurar dotenv para poder utilizar las variables d entorno del .env
-dotenv.config();
-
-//! conectamos con la base de datos
-connect();
-
-//! -----------------VARIABLES CONSTANTES --> PORT
-
+// TRAER DEL ENV LA VARIABLE DE ENTORNO DEL PORT
+//*La variable tiene que estar siempre en mayúsculas
 const PORT = process.env.PORT;
+console.log(PORT);
 
 // CORS --> CONFIGURAR EL QUE SE PUEDE HACER EN EL BACK ASI COMO EL ACCESO
 app.use(cors());
@@ -23,8 +21,11 @@ app.use(cors());
 app.use(express.json({ limit: "5mb" }));
 app.use(express.urlencoded({ limit: "5mb", extended: false }));
 
-//! -----------------  ERRORES GENERALES Y RUTA NO ENCONTRADA
+//! ------------------ ROUTAS DE LA APP -------------------------
 
+//! -----------------  ERRORES GENERALES Y RUTA NO ENCONTRADA
+//siempre en el controlador se tiene: req, res, next
+// el "*" para decirle una ruta que no esta contemplada / "*"=cualquier persona puede acceder a eso
 app.use("*", (req, res, next) => {
   const error = new Error("Route not found");
   error.status = 404;
@@ -40,7 +41,9 @@ app.use((error, req, res) => {
 });
 
 //! ------------------ ESCUCHAMOS EN EL PUERTO EL SERVIDOR WEB-----
-
+// esto de aqui  nos revela con que tecnologia esta hecho nuestro back.
+///listen = escucha un puerto que recibe la variable de entorno que viene del .env
+app.disable("x-powered-by");
 app.listen(PORT, () =>
   console.log(`Server listening on port 👌🔍 http://localhost:${PORT}`)
 );

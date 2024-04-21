@@ -1,6 +1,4 @@
-//!------------------------------------------------------------------------------
 //?----------------------CONEXION CON LA base de datos MONGO DB------------------
-//!------------------------------------------------------------------------------
 
 // tenemos que traernos dotenv porque tenmos la url que no queremos que se comparta publicamente
 const dotenv = require("dotenv");

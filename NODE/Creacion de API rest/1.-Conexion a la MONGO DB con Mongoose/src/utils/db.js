@@ -19,12 +19,13 @@ const connect = async () => {
     const db = await mongoose.connect(MONGO_URI);
 
     // AHORA NOS VAMOS A TRAER EL HOST  y el NAME  de la DB --
+    /// { name, host } = esto es destructuring
 
     const { name, host } = db.connection;
 
     console.log(
       `Conectada la DB 👌  en el host: ${host} con el nombre: ${name}`
-    );
+    ); ///se lanza el console.log donde decimos con cual host y name esta conectada
   } catch (error) {
     console.log("No se ha conectado la db❌", error.message);
   }
