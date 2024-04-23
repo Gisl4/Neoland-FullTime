@@ -38,6 +38,7 @@ UserRoutes.patch("/changepassword", [isAuth], modifyPassword); // [isAuth] este 
 // si no se tiene el [isAuth] no se tiene una req.user que se crea en el middleware
 UserRoutes.patch("/update/update", [isAuth], upload.single("image"), update);
 //Se pone primero la ruta, el [middleware] de autentificacion, tiene una subida de imagen y el controlador update
+//metodo enpoind y funcion controladora
 UserRoutes.delete("/", [isAuth], deleteUser); //como solo esta un delete se pone una barra vacia
 UserRoutes.get("/", getAll);
 UserRoutes.get("/finById/:id", byId);

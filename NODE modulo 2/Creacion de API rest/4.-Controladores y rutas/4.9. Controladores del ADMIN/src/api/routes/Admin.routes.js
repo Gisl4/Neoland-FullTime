@@ -1,4 +1,4 @@
-const express = require("express");
+const express = require("express"); // express crea las rutas
 const AdminRoutes = express.Router();
 
 const { upload } = require("../../middleware/files.middleware");
