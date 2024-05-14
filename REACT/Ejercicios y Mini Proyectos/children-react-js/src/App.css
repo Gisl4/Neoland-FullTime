@@ -1,0 +1,13 @@
+body {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgb(212, 211, 122);
+}
+
+#root {
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}

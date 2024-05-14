@@ -1,0 +1,17 @@
+.navGeneral {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  & button {
+    width: 100px;
+    height: 50px;
+    border: none;
+    background-color: rgb(158, 134, 172);
+    border-radius: 10px;
+    color: rgb(97, 7, 29);
+    font-weight: bold;
+  }
+}

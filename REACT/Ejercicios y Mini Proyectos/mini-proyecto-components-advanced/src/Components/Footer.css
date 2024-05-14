@@ -1,0 +1,7 @@
+footer {
+  min-height: 15vh;
+  background-color: rgba(165, 214, 102, 0.167);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

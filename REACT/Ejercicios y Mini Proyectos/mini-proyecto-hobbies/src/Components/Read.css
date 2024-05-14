@@ -1,0 +1,55 @@
+.readContainer {
+  max-width: 500px;
+  margin: auto;
+  font-family: Monospace, sans-serif;
+  border-style: dotted;
+  border-radius: 10px;
+  background-color: #e8dff5;
+}
+
+.readTitle {
+  font-size: 24px;
+  color: black;
+  margin: 30px;
+}
+
+.bookInfo {
+  display: flex;
+  align-items: center;
+}
+
+.bookImage {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.bookDetails h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.bookDetails p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.otherBooks {
+  margin-top: 20px;
+}
+
+.otherBooksTitle {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.otherBooksList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.otherBooksItem {
+  font-size: 14px;
+  margin-bottom: 5px;
+}

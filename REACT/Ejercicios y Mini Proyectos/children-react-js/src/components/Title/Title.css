@@ -1,0 +1,7 @@
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #8c0fbe;
+  text-shadow: 3px 3px 1px rgb(31, 146, 212), 5px 5px 2px rgb(182, 77, 168),
+    8px 8px 3px blue;
+}

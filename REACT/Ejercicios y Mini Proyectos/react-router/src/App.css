@@ -1,0 +1,40 @@
+main {
+  min-height: 70vh;
+  padding: 20px;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid rgb(185, 159, 9);
+  border-radius: 5px;
+}
+
+.navContainer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #3cda0d;
+  margin-right: 20px;
+}
+
+.navContainer a:hover {
+  color: #df0aaa;
+}
+
+h1 {
+  text-align: center;
+  text-shadow: 7px 4px 5px rgb(173, 192, 218);
+  color: rgb(73, 214, 45);
+}
+
+h2 {
+  text-align: center;
+  color: rgb(188, 190, 19);
+}
+
+p {
+  text-align: center;
+  color: rgb(223, 213, 130);
+}

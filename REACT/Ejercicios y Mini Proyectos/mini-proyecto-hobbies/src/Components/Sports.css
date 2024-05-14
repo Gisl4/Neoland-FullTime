@@ -1,0 +1,37 @@
+.sportsContainer {
+  max-width: 500px;
+  margin: auto;
+  font-family: Monospace, sans-serif;
+  border-style: dotted;
+  border-radius: 10px;
+  background-color: #e8dff5;
+}
+
+.sportsTitle {
+  font-size: 24px;
+  color: black;
+  margin: 30px;
+}
+
+.sportsList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sportItem {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+}
+
+.sportItem h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.sportItem p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: black;
+}
