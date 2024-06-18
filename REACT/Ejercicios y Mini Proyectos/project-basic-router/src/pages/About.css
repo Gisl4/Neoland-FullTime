@@ -1,0 +1,18 @@
+.aboutContainer {
+  max-width: 800px;
+  margin: 0 auto; /* Centrar el contenedor horizontalmente */
+  padding: 20px;
+}
+
+.aboutTitle {
+  font-size: 24px;
+  color: #0ac2b3;
+  margin-bottom: 20px;
+}
+
+.aboutParagraph {
+  font-size: 16px;
+  color: #26b8b0;
+  line-height: 1.5; /* Altura de línea */
+  text-align: justify;
+}

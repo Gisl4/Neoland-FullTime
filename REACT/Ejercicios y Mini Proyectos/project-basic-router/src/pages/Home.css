@@ -1,0 +1,44 @@
+.homeContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.homeTitle {
+  font-size: 24px;
+  color: #a32a9d;
+  margin-bottom: 20px;
+}
+
+.homeParagraph {
+  font-size: 16px;
+  color: #6d0a70;
+  line-height: 1.5; /* Mayor interlineado */
+  text-align: justify;
+}
+
+.visitedPageLink {
+  /* Estilos para la etiqueta span */
+  font-weight: bold;
+  cursor: pointer; /* Cambia el cursor al puntero al pasar sobre el enlace */
+}
+
+.visitedContainer {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px dotted rgb(56, 175, 9);
+}
+
+.homeImage {
+  width: 100%;
+  height: auto;
+  max-width: 450px; /* Ajusta esto según tus necesidades */
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid #ccc; /* Color y grosor del borde */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreado */
+  border-radius: 10px; /* Bordes redondeados (opcional) */
+}
+

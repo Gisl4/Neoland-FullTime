@@ -1,0 +1,12 @@
+footer {
+  min-height: 10vh;
+  background-color: rgb(212, 187, 154);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textFooter {
+  font-size: 8px;
+  color: rgb(24, 6, 36);
+}

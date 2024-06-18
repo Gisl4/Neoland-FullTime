@@ -1,0 +1,32 @@
+header {
+  min-height: 20vh;
+  background-color: rgb(212, 187, 154);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+}
+
+h3 {
+  color: rgb(196, 52, 112);
+  font-size: 20px;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Apila los elementos verticalmente en pantallas pequeñas */
+    text-align: center; /* Centra el texto en pantallas pequeñas */
+    align-items: center; /*centro verticalmente el contenido en móviles.*/
+    padding: 20px 0;
+  }
+
+  h3 {
+    margin: 0; /* Elimina el margen del texto en pantallas pequeñas */
+    margin-bottom: 20px; /* Añade un poco de espacio entre el texto y los botones en pantallas pequeñas */
+  }
+
+  .navGeneral {
+    flex-direction: column; /* Apila los botones verticalmente en pantallas pequeñas */
+  }
+}
